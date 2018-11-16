@@ -10,10 +10,12 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    this.fire = this.fire.bind(this);
+
     this.state = {
       power: 0,
-      rof: 0
-
+      rof: 0,
+      shotsFired: 0
     }
   }
 
@@ -44,15 +46,20 @@ class App extends Component {
 
         <button 
           id="fire-btn"
-          onClick={() => {
-            console.log("clicked")
-          }}>
+          onClick={this.fire}>
           <h4 id="fire-btn-txt">FIRE</h4>
         </button>
         
       </div>
     );
   }
+
+  fire() {
+    this.setState({
+      shotsFired: this.state.shotsFired + 1
+    });
+  }
+
 }
 
 export default App;
