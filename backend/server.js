@@ -13,11 +13,11 @@ app.get('/api', (req, res) => {
 });
 
 app.post('/api/fire', (req, res) => {
-	console.log("firing!");
+	console.log("Power: " + String.fromCharCode(req.body.power + 65));
+	console.log("Rof: " + String.fromCharCode(req.body.rof + 97));
 
-  serialPort.write((req.body.power + 65)+ "\n");	//lowercase
-
-  serialPort.write((req.body.rof + 97) + "\n");	//uppercase
+  serialPort.write((String.fromCharCode(req.body.power + 65))+ "\n");	//lowercase
+  serialPort.write((String.fromCharCode(req.body.rof + 97)) + "\n");	//uppercase
 
 
   res.send(
