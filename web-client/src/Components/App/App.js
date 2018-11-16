@@ -16,8 +16,8 @@ class App extends Component {
 
     this.state = {
       lastFireTime: 0,
-      power: 0,
-      rof: 0,
+      power: 200,
+      rof: 200,
       shotsFired: 0
     }
   }
@@ -34,7 +34,7 @@ class App extends Component {
             <Slider min={0} max={255} defaultValue={200}
               onChange={(newSliderPos) => {
                 this.setState({
-                  rof: newSliderPos
+                  power: newSliderPos
                 });
               }}/>
           </div>
@@ -69,7 +69,8 @@ class App extends Component {
       fetch("/api/fire", {
         method: 'POST',
         body: JSON.stringify({
-          "a": "foo"
+          power: this.state.power,
+          rof: this.state.rof,
         }),
         headers: {"Content-Type": "application/json"}
       })
