@@ -7,6 +7,7 @@
 #sliders-container {
   display: flex;
   margin-bottom: 3em;
+  flex-wrap: wrap;
 }
 
 .slider-wrapper {
