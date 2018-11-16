@@ -13,9 +13,12 @@ app.get('/api', (req, res) => {
 });
 
 app.post('/api/fire', (req, res) => {
-  console.log(req.body);
+	console.log("firing!");
 
-  serialPort.write("h");
+  serialPort.write(req.body.power + "\n");
+
+  serialPort.write((req.body.rof + 300) + "\n");
+
 
   res.send(
     `I received your POST request. This is what you sent me: ${req.body.post}`,
