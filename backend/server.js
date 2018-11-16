@@ -15,9 +15,9 @@ app.get('/api', (req, res) => {
 app.post('/api/fire', (req, res) => {
 	console.log("firing!");
 
-  serialPort.write(req.body.power + "\n");
+  serialPort.write((req.body.power + 65)+ "\n");	//lowercase
 
-  serialPort.write((req.body.rof + 300) + "\n");
+  serialPort.write((req.body.rof + 97) + "\n");	//uppercase
 
 
   res.send(
