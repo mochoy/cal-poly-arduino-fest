@@ -1,9 +1,23 @@
 #title {
   color: white;
   font-weight: normal;
+  font-size: 3em;
 } 
 
+#sliders-container {
+  display: flex;
+}
 
+.slider-wrapper {
+  width: 30%;
+  margin: 2em auto;
+}
+
+.slider-title {
+  color: white;
+  font-weight: normal;
+  font-size: 2em;
+} 
 
 
 
@@ -28,6 +42,7 @@
   background-color: #282c34;
   margin: 0;
   padding-top: 5em;
+  height: 100%;
 }
 
 .App-logo {
