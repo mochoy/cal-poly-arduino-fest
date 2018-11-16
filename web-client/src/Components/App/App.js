@@ -41,6 +41,14 @@ class App extends Component {
               }}/>
           </div>
         </div>
+
+        <button 
+          id="fire-btn"
+          onClick={() => {
+            console.log("clicked")
+          }}>
+          <h4 id="fire-btn-txt">FIRE</h4>
+        </button>
         
       </div>
     );

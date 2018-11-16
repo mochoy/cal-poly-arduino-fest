@@ -6,6 +6,7 @@
 
 #sliders-container {
   display: flex;
+  margin-bottom: 3em;
 }
 
 .slider-wrapper {
@@ -19,6 +20,24 @@
   font-size: 2em;
 } 
 
+#fire-btn {
+  border: none;
+  background-color: #ffa500;
+  padding: 0 4em;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+#fire-btn:hover {
+  background-color: #ffb732;
+}
+
+#fire-btn-txt {
+  font-weight: normal;
+  font-size: 2em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
 
 
 
@@ -42,7 +61,7 @@
   background-color: #282c34;
   margin: 0;
   padding-top: 5em;
-  height: 100%;
+  padding-bottom: 5em;
 }
 
 .App-logo {
