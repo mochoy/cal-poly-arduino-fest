@@ -57,6 +57,8 @@ class App extends Component {
 
         <p id="shotsFired-txt">{this.state.shotsFired + " shots fired"}</p>
         
+        <p>Don't aim at eyes or face! Pleae don't touch the blaster unless you're aiming it and pick up all darts that you fire.</p>
+
       </div>
     );
   }
