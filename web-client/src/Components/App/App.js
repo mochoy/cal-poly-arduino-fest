@@ -23,6 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 id="title">Web-Controlled Nerf Blaster</h1>
+
         <div id="sliders-container">
           <div className="slider-wrapper">
             <h3 className="slider-title">Power</h3>
@@ -49,6 +50,8 @@ class App extends Component {
           onClick={this.fire}>
           <h4 id="fire-btn-txt">FIRE</h4>
         </button>
+
+        <p id="shotsFired-txt">{this.state.shotsFired + " shots fired"}</p>
         
       </div>
     );
