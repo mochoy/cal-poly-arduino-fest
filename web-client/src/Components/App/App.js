@@ -60,8 +60,13 @@ class App extends Component {
         
         <p>Don't aim at eyes or face! Pleae don't touch the blaster unless you're aiming it and pick up all darts that you fire. Blaster is highly modified.</p>
 
+        <div id="how-it-works">
+          <h1 className="subtitle">How it works</h1>
+          <p>The React client application submits a post request with the fetch API to the node web server. The web server receives a call to fire with the parameters to specify rate of fire and power and converts this into Arduino-readable serial-compatible ASCII code before outputing it to the appropriate serial port. When the Arduino receives the ASCII command from the webserver through serial, it is then mapped into an appropriate value to be analog written to the corresponding MOSFET motor controllers with protection from ESD, dV/dt, transient inductive spiking, and parascitic oscillation failure modes.</p>
+        </div>
+
         <div id="technologies">
-          <h1 id="technologies-title">Technologies</h1>
+          <h1 className="subtitle">Technologies</h1>
           <div id="technologies-container">
             <div className="technologies-box">
               <h2>Frontend</h2>
