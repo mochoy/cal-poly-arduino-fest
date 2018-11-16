@@ -59,6 +59,8 @@ class App extends Component {
 
   fire() {
     this.setState({
+      power: 0,
+      rof: 0,
       shotsFired: this.state.shotsFired + 1
     });
   }
