@@ -26,6 +26,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 id="title">Web-Controlled Nerf Blaster</h1>
+        <p>Tech in your blaster to a whole new level.</p>
         <a href="https://www.montychoy.com/" target="_blank" id="link">montychoy.com</a>
 
         <div id="sliders-container">
