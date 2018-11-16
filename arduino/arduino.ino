@@ -5,5 +5,7 @@ void setup() {
 }
 
 void loop() {
-	
+	if(Serial.available() > 0) {
+		Serial.println((String)Serial.read());
+	} 
 }
