@@ -26,7 +26,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 id="title">Web-Controlled Nerf Blaster</h1>
-        <p>Monty Choy</p>
+        <a href="https://www.montychoy.com/" target="_blank" id="link">montychoy.com</a>
 
         <div id="sliders-container">
           <div className="slider-wrapper">
@@ -57,7 +57,33 @@ class App extends Component {
 
         <p id="shotsFired-txt">{this.state.shotsFired + " shots fired"}</p>
         
-        <p>Don't aim at eyes or face! Pleae don't touch the blaster unless you're aiming it and pick up all darts that you fire.</p>
+        <p>Don't aim at eyes or face! Pleae don't touch the blaster unless you're aiming it and pick up all darts that you fire. Blaster is highly modified.</p>
+
+        <div id="technologies">
+          <h1 id="technologies-title">Technologies</h1>
+          <div id="technologies-container">
+            <div className="technologies-box">
+              <h2>Frontend</h2>
+              <p>React</p>
+              <p>create-react-app</p>
+              <p>rc-slider</p>
+            </div>
+            <div className="technologies-box">
+              <h2>Backend</h2>
+              <p>Node.js</p>
+              <p>Express.js</p>
+              <p>body-parser</p>
+              <p>node-serialport</p>
+              <p>nodemon</p>
+            </div>
+            <div className="technologies-box">
+              <h2>Hardware</h2>
+              <p>Arduino</p>
+              <p>Serial</p>
+              <p>Own company's MOSFET board</p>
+            </div>
+          </div>
+        </div>
 
       </div>
     );
