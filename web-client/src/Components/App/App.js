@@ -12,7 +12,10 @@ class App extends Component {
 
     this.fire = this.fire.bind(this);
 
+    this.fireDelay = 200;
+
     this.state = {
+      lastFireTime: 0,
       power: 0,
       rof: 0,
       shotsFired: 0
@@ -58,11 +61,14 @@ class App extends Component {
   }
 
   fire() {
-    this.setState({
-      power: 0,
-      rof: 0,
-      shotsFired: this.state.shotsFired + 1
-    });
+    let ms = new Date().getTime();
+
+    if (this.state.lastFireTime + this.fireDelay < ms) {
+      this.setState({
+        lastFireTime: ms,
+        shotsFired: this.state.shotsFired + 1
+      });
+    }
   }
 
 }
