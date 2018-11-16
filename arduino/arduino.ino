@@ -4,8 +4,8 @@
 #define FLYWHEEL_PIN 5
 #define PUSHER_PIN 6
 
-#define ACCEL_DELAY 500
-#define FIRING_DELAY 500
+#define ACCEL_DELAY 200
+#define FIRING_DELAY 250
 
 int flywheelPower = 0;
 int rof = 0;
