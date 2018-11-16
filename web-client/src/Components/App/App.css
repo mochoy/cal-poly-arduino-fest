@@ -15,7 +15,6 @@
 }
 
 .slider-title {
-  color: white;
   font-weight: normal;
   font-size: 2em;
 } 
@@ -40,7 +39,6 @@
 }
 
 #shotsFired-txt {
-  color: white;
   font-size: 1.5em;
 }
 
@@ -59,7 +57,9 @@
 
 
 
-
+p, h1, h2, h3, h4, h5, h6 {
+  color: white;
+}
 
 .App {
   text-align: center;
