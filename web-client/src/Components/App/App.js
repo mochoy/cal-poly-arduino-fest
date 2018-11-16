@@ -65,14 +65,24 @@ class App extends Component {
 
   fire() {
     let ms = new Date().getTime();
-
     if (this.state.lastFireTime + this.fireDelay < ms) {
+      fetch("/api/fire", {
+        method: 'POST',
+        body: JSON.stringify({
+          "a": "foo"
+        }),
+        headers: {"Content-Type": "application/json"}
+      })
+      .then((res) => {
+          console.log(res);
+        }
+      );
       this.setState({
         lastFireTime: ms,
         shotsFired: this.state.shotsFired + 1
       });
     }
-  }
+  }    
 
 }
 
