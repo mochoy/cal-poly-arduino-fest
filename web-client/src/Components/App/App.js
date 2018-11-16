@@ -31,19 +31,19 @@ class App extends Component {
         <div id="sliders-container">
           <div className="slider-wrapper">
             <h3 className="slider-title">Power</h3>
-            <Slider min={0} max={255} defaultValue={200}
+            <Slider min={0} max={250} defaultValue={200}
               onChange={(newSliderPos) => {
                 this.setState({
-                  power: newSliderPos
+                  power: newSliderPos/10
                 });
               }}/>
           </div>
           <div className="slider-wrapper">
             <h3 className="slider-title">Rate of Fire</h3>
-            <Slider min={0} max={255} defaultValue={200} 
+            <Slider min={0} max={250} defaultValue={200} 
               onChange={(newSliderPos) => {
                 this.setState({
-                  rof: newSliderPos
+                  rof: newSliderPos/10
                 });
               }}/>
           </div>
